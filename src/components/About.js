@@ -1,5 +1,5 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components'; 
 
 const About=()=> {
@@ -7,8 +7,12 @@ const About=()=> {
   
     <SuperWrapper>
    <Wrapper>
+   <Homepage>
+   <Link style={{ "textDecoration": "none" }} to="/">
+          <a href="/">Home</a>
+</Link>
+   </Homepage>
      <Profile> 
-       <h1>About Me</h1>
        <br></br>
        <img src="https://media-exp1.licdn.com/dms/image/C4D03AQEvBVTtMdDS9g/profile-displayphoto-shrink_800_800/0/1648822901993?e=1655337600&v=beta&t=3BXd1blqwad2PuRR6QCD6XAGJE7RWfCblrASkqaTs8A" height="300px" width="300px" alt="Profile"></img>
      </Profile>
@@ -18,6 +22,9 @@ const About=()=> {
       <h2>Hello! Myself Neha Yadav</h2>
       <br/>
       <p>My Hobby is photography </p>
+      <br/>
+      
+      {/* <a href="https://www.linkedin.com/in/neha-yadav-869a381a6/">LinkedIn proflie</a> */}
       <br/>
       <br/>
       <br/>
@@ -32,6 +39,27 @@ const About=()=> {
 
 export default About;
 
+const Homepage =styled.div`
+display:flex;
+height: 48px;
+width:50px;
+min-width: 123px;
+align-items: center;
+justify-content:center;
+border-radius: 24px;
+cursor:pointer;
+
+background-color: #2b452a;
+
+a{
+  text-decoration:none;
+  background:transparent;
+  color:white;
+  font-weight:700;
+  border:none;
+
+}
+`
 const SuperWrapper=styled.div
 ` 
 margin:auto;
@@ -79,6 +107,9 @@ padding:30px;
 p{
   font-family: "Lucida Handwriting";
   font-weight:20px;
+  color:white;
+}
+a{
   color:white;
 }
 
