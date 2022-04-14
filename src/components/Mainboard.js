@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 import Pin from './Pin';
 import "./Mainboard.css";
 
+
 function Mainboard(props) {
 
     let { pins } = props;

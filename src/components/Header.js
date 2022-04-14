@@ -7,12 +7,14 @@ import NotificationsIcon from '@mui/icons-material/Notifications';
 import FaceIcon from '@mui/icons-material/Face';
 import TextsmsIcon from '@mui/icons-material/Textsms';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-
-
-
+// import {useNavigate} from "react-router-dom";
+// import About from "./About";
+import {Link} from "react-router-dom";
 
 
 function Header(props) {
+
+  // const navigate=useNavigate();
 
 const [input,setInput]=useState("");
 
@@ -32,9 +34,18 @@ const onSearchSubmit=(e)=>{
         <HomePageButton>
           <a href="/">Homepage</a>
        </HomePageButton>
-
+    
         <FollowingButton>
-          <a href="/">Following</a>
+          {/* <a href="/" onClick={
+            ()=> navigate("/about")
+          }
+          >About</a> */}
+          {/* <a href="/">About</a> */}
+
+          <Link style={{ "textDecoration": "none" }} to="/About">
+          <a href="/">About</a>
+</Link>
+          
        </FollowingButton>
 
        <SearchWrapper>
@@ -135,6 +146,12 @@ a{
   color:black;
   font-weight:700;
 }
+
+${'' /* button{
+  text-decoration:none;
+  color:black;
+  font-weight:700;
+} */}
 
 :hover{
   background-color:#e1e1e1;
